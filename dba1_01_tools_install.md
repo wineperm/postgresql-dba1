@@ -28,7 +28,7 @@ cd postgresql-17.0/
 ll
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_01_tools_install/unpacking.jpg)
 
 ## Создание конфигурации
 
@@ -41,7 +41,7 @@ sudo apt-get install -y zlib1g-dev
 ./configure --prefix=/home/vagrant/postgresql/pgsql17 --with-pgport=5555 --without-icu
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_01_tools_install/creating_configuration.jpg)
 
 ## Сборка и установка PostgreSQL
 
@@ -62,7 +62,7 @@ export PATH=/home/vagrant/postgresql/pgsql17/bin:$PATH
 initdb -U postgres -k
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_01_tools_install/creating_cluster.jpg)
 
 ## Управление сервером
 
@@ -72,7 +72,7 @@ psql -U postgres -p 5555 -c 'SELECT now();'
 pg_ctl stop
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_01_tools_install/cluster_management.jpg)
 
 ---
 
@@ -105,4 +105,4 @@ sudo pg_ctlcluster 17 main start
 sudo pg_ctlcluster 17 main status
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_01_tools_install/Enabling_checksum_calculation.jpg)
