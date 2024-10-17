@@ -22,7 +22,7 @@
 
 ## Решение
 
-## Запуск psql и просмотр информации о подключении
+## 1.Запуск psql и просмотр информации о подключении
 
 ```
 sudo -i -u postgres
@@ -32,7 +32,7 @@ psql
 
 ![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/launch.jpg)
 
-## Вывод список баз данных в подробном виде
+## 2.Вывод список баз данных в подробном виде
 
 ```
 \l+
@@ -40,7 +40,7 @@ psql
 
 ![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/database_information.jpg)
 
-## Замена на команду «less -XS»
+## 3.Замена на команду «less -XS»
 
 ```
 echo "\setenv PSQL_PAGER 'less -XS'" > ~/.psqlrc
@@ -48,7 +48,7 @@ echo "\setenv PSQL_PAGER 'less -XS'" > ~/.psqlrc
 
 ![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/less-XS.jpg)
 
-## Настройка приглашения
+## 4.Настройка приглашения
 
 ```
 echo "\set PROMPT1 '%n@%/%R%x%# '" >> ~/.psqlrc
@@ -57,7 +57,7 @@ echo "\set PROMPT2 '%n@%/%R%x%# '" >> ~/.psqlrc
 
 ![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/invite.jpg)
 
-## Вывод длительности выполнения команд SQL
+## 5.Вывод длительности выполнения команд SQL
 
 ```
 echo "\timing on" >> ~/.psqlrc
@@ -91,7 +91,7 @@ SELECT * FROM your_table;
 
 ## Решение
 
-## Утилита psql и обработка ошибок внутри транзакций
+## 1.Утилита psql и обработка ошибок внутри транзакций
 
 ```
 sudo -i -u postgres
@@ -106,7 +106,7 @@ SELECT * FROM t;
 
 ![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/error_handling.jpg)
 
-## Переменная ON_ERROR_ROLLBACK
+## 2.Переменная ON_ERROR_ROLLBACK
 
 ```
 sudo -i -u postgres
