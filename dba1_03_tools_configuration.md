@@ -24,7 +24,7 @@ psql
 SELECT name, setting, unit FROM pg_settings WHERE context = 'postmaster';
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_03_tools_configuration/restart%20options.jpg)
 
 ## 2. Установка параметра max_connections
 
@@ -43,7 +43,7 @@ psql
 SHOW max_connections;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_03_tools_configuration/max_connections.jpg)
 
 # Практика +
 
@@ -67,7 +67,7 @@ SHOW max_connections;
 psql "options='-c work_mem=32MB'" -c 'SHOW work_mem'
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_03_tools_configuration/startup_parameters.jpg)
 
 ## 2. Где определяется config_file
 
@@ -79,4 +79,4 @@ sudo cat /var/lib/postgresql/17/main/postmaster.pid | head -n 1
 ps -p 356299 -ho command
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_03_tools_configuration/config_file.jpg)
