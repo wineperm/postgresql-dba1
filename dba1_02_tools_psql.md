@@ -30,7 +30,7 @@ psql
 \conninfo
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/launch.jpg)
 
 ## Вывод список баз данных в подробном виде
 
@@ -38,7 +38,7 @@ psql
 \l+
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/database_information.jpg)
 
 ## Замена на команду «less -XS»
 
@@ -46,7 +46,7 @@ psql
 echo "\setenv PSQL_PAGER 'less -XS'" > ~/.psqlrc
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/less-XS.jpg)
 
 ## Настройка приглашения
 
@@ -55,7 +55,7 @@ echo "\set PROMPT1 '%n@%/%R%x%# '" >> ~/.psqlrc
 echo "\set PROMPT2 '%n@%/%R%x%# '" >> ~/.psqlrc
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/invite.jpg)
 
 ## Вывод длительности выполнения команд SQL
 
@@ -72,7 +72,7 @@ psql
 SELECT * FROM your_table;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/timing.jpg)
 
 # Практика +
 
@@ -104,7 +104,7 @@ COMMIT;
 SELECT * FROM t;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/error_handling.jpg)
 
 ## Переменная ON_ERROR_ROLLBACK
 
@@ -118,4 +118,8 @@ INSERTINTO t VALUES(1);
 INSERT INTO t VALUES(1);
 COMMIT;
 SELECT * FROM t;
+DROP TABLE t;
+SELECT * FROM t;
 ```
+
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_02_tools_psql/on_error_rollback.jpg)
