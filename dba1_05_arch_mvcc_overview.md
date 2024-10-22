@@ -36,7 +36,7 @@ SELECT * FROM t;
 COMMIT;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_05_arch_mvcc_overview/read_committed.jpg)
 
 ## 2. Уровень изоляции Repeatable Read
 
@@ -53,7 +53,7 @@ SELECT * FROM t;
 COMMIT;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_05_arch_mvcc_overview/repeatable_read.jpg)
 
 # Практика +
 
@@ -89,7 +89,7 @@ COMMIT;
 | SELECT * FROM t1;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_05_arch_mvcc_overview/DDL_fixing.jpg)
 
 ## 2. Транзакции и команды DDL — откат
 
@@ -102,7 +102,7 @@ ROLLBACK;
 SELECT * FROM t2;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_05_arch_mvcc_overview/DDL_rollback.jpg)
 
 ## 3. Блокировки таблиц
 
@@ -113,4 +113,4 @@ SELECT * FROM t1;
 COMMIT;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_05_arch_mvcc_overview/table_locks.gif)
