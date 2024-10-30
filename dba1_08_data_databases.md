@@ -29,7 +29,7 @@ CREATE DATABASE data_databases;
 \c data_databases
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_08_data_databases/Database.jpg)
 
 ## 2. Размер БД
 
@@ -38,7 +38,7 @@ SELECT pg_size_pretty(pg_database_size('data_databases'));
 SELECT pg_database_size('data_databases') AS oldsize \gset
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_08_data_databases/Database_size.jpg)
 
 ## 3. Схемы и таблицы
 
@@ -57,7 +57,7 @@ CREATE TABLE app.c(s text);
 INSERT INTO app.c VALUES ('app');
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_08_data_databases/Diagrams_and_tables.jpg)
 
 ## 4. Изменение размера БД
 
@@ -67,7 +67,7 @@ SELECT pg_database_size('data_databases') AS newsize \gset
 SELECT pg_size_pretty(:newsize::bigint - :oldsize::bigint);
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_08_data_databases/Changing_the_database_size.jpg)
 
 ## 5. Путь поиска
 
@@ -83,7 +83,7 @@ SELECT * FROM b;
 SELECT * FROM c;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_08_data_databases/Search_path.jpg)
 
 # Практика +
 
@@ -99,26 +99,16 @@ SELECT * FROM c;
 
 ## Решение
 
-## 1.
+## 1. Установка temp_buffers
 
 ```
-
+CREATE DATABASE data_databases;
+\c data_databases
+SELECT name, setting, unit, boot_val, reset_val FROM pg_settings WHERE name = 'temp_buffers' \gx
+ALTER DATABASE data_databases SET temp_buffers = '32MB';
+\c
+SHOW temp_buffers;
+\drds
 ```
 
-![Alt text]()
-
-## 2.
-
-```
-
-```
-
-![Alt text]()
-
-## 3.
-
-```
-
-```
-
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_08_data_databases/Installing_temp_buffers.jpg)
