@@ -31,7 +31,7 @@ SELECT pg_reload_conf();
 SELECT pid, backend_start, backend_type FROM pg_stat_activity WHERE backend_type = 'autovacuum launcher';
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_06_arch_vacuum_overview/Disabling_auto-cleaning.jpg)
 
 ## 2. База данных, таблица и индекс
 
@@ -43,7 +43,7 @@ CREATE INDEX t_n on t(n);
 INSERT INTO t SELECT random() FROM generate_series(1,100_000);
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_06_arch_vacuum_overview/Data_base_Table_Index.jpg)
 
 ## 3. Изменение строк без очистки
 
@@ -58,7 +58,7 @@ UPDATE t SET n=n WHERE n < 0.5;
 :SIZE
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_06_arch_vacuum_overview/Changing_lines_without_clearing.jpg)
 
 ## 4. Полная очистка
 
@@ -67,7 +67,7 @@ VACUUM FULL t;
 :SIZE
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_06_arch_vacuum_overview/Full_cleaning.jpg)
 
 ## 5. Изменение строк с очисткой
 
@@ -83,7 +83,7 @@ VACUUM t;
 :SIZE
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_06_arch_vacuum_overview/Changing_lines_with_clearing.jpg)
 
 ## 6. Восстанавливаем автоочистку
 
@@ -92,4 +92,4 @@ ALTER SYSTEM RESET autovacuum;
 SELECT pg_reload_conf();
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_06_arch_vacuum_overview/Restore_auto-cleaning.jpg)
