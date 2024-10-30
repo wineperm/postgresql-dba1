@@ -23,7 +23,7 @@ sudo cat /var/lib/postgresql/17/main/postmaster.pid
 sudo ps -o pid,command --ppid 1046
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_07_arch_wal_overview/Operating_system_processes.jpg)
 
 ## 2. Остановка в режиме fast
 
@@ -34,7 +34,7 @@ sudo pg_ctlcluster 17 main start
 cat /var/log/postgresql/postgresql-17-main.log
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_07_arch_wal_overview/Stop_in_fast_mode.jpg)
 
 ## 3. Остановка в режиме immediate
 
@@ -45,4 +45,4 @@ sudo pg_ctlcluster 17 main start
 cat /var/log/postgresql/postgresql-17-main.log
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_07_arch_wal_overview/Stop_in_immediate_mode.jpg)
