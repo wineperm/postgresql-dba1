@@ -41,7 +41,7 @@ exit
 sudo -u postgres rm -rf /var/lib/postgresql/ts_dir
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_11_data_lowlevel/Non-journalable_table.jpg)
 
 ## 2. Таблица с текстовым столбцом
 
@@ -56,7 +56,7 @@ SELECT chunk_id, chunk_seq, length(chunk_data) FROM pg_toast.pg_toast_24652
 ORDER BY chunk_id, chunk_seq;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_11_data_lowlevel/A_table_with_a_text_column.jpg)
 
 Объяснение
 Короткая строка: Если строка короткая (менее 2000 байт), она будет храниться в основной таблице, даже если стратегия хранения установлена на external.
@@ -105,7 +105,7 @@ pg_filenode.map — отображение oid некоторых таблиц �
 pg_internal.init — кеш системного каталога;
 PG_VERSION — версия PostgreSQL
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_11_data_lowlevel/Comparing_the_size_of_the_database_and_the_tables_in_it.jpg)
 
 ## 2. Поддержка методов сжатия TOAST
 
@@ -115,7 +115,7 @@ SELECT * FROM (SELECT string_to_table(setting, ''' ''') AS setting FROM pg_confi
 SELECT setting, enumvals FROM pg_settings WHERE name = 'default_toast_compression';
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_11_data_lowlevel/Support_for_TOAST_compression_methods.jpg)
 
 ## 3. Сравнение методов сжатия
 
@@ -146,4 +146,4 @@ exit
 sudo rm -f /tmp/gram.input
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_11_data_lowlevel/Comparison_of_compression_methods.jpg)
