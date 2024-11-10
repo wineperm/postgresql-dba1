@@ -59,9 +59,10 @@ ORDER BY chunk_id, chunk_seq;
 ![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_11_data_lowlevel/A_table_with_a_text_column.jpg)
 
 Объяснение
-Короткая строка: Если строка короткая (менее 2000 байт), она будет храниться в основной таблице, даже если стратегия хранения установлена на external.
-Длинная строка: Если строка длинная (более 2000 байт), она будет храниться в toast-таблице.
-Таким образом, короткая строка не попадет в toast-таблицу, а длинная строка попадет.
+
+- Короткая строка: Если строка короткая (менее 2000 байт), она будет храниться в основной таблице, даже если стратегия хранения установлена на external.
+- Длинная строка: Если строка длинная (более 2000 байт), она будет храниться в toast-таблице.
+  Таким образом, короткая строка не попадет в toast-таблицу, а длинная строка попадет.
 
 # Практика +
 
@@ -98,12 +99,12 @@ SELECT oid FROM pg_database WHERE datname = 'data_lowlevel';
 ls -l /var/lib/postgresql/17/main/base/24658/[^0-9]*
 ```
 
-WHERE NOT relisshared -- локальные объекты базы
-AND relkind = 'r'; -- обычные таблицы
+- WHERE NOT relisshared -- локальные объекты базы
+- AND relkind = 'r'; -- обычные таблицы
 
-pg_filenode.map — отображение oid некоторых таблиц в имена файлов;
-pg_internal.init — кеш системного каталога;
-PG_VERSION — версия PostgreSQL
+- pg_filenode.map — отображение oid некоторых таблиц в имена файлов;
+- pg_internal.init — кеш системного каталога;
+- PG_VERSION — версия PostgreSQL
 
 ![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_11_data_lowlevel/Comparing_the_size_of_the_database_and_the_tables_in_it.jpg)
 
