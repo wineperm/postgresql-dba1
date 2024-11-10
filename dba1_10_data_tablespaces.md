@@ -31,7 +31,7 @@ psql
 CREATE TABLESPACE ts LOCATION '/var/lib/postgresql/ts_dir';
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_10_data_tablespaces/New_tablespace.jpg)
 
 ## 2. Табличное пространство по умолчанию для template1
 
@@ -39,7 +39,7 @@ CREATE TABLESPACE ts LOCATION '/var/lib/postgresql/ts_dir';
 ALTER DATABASE template1 SET TABLESPACE ts;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_10_data_tablespaces/The_default_tablespace_for_template1.jpg)
 
 ## 3. Новая база данных и проверка
 
@@ -48,7 +48,7 @@ CREATE DATABASE db;
 SELECT spcname FROM pg_tablespace WHERE oid = (SELECT dattablespace FROM pg_database WHERE datname = 'db');
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_10_data_tablespaces/New_database_and_verification.jpg)
 
 ## 4. Символическая ссылка
 
@@ -59,7 +59,7 @@ exit
 sudo -u postgres ls -l /var/lib/postgresql/17/main/pg_tblspc/24639
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_10_data_tablespaces/Symbolic_link.jpg)
 
 ## 5. Удаление табличного пространства
 
@@ -74,7 +74,7 @@ exit
 sudo -u postgres rm -rf /var/lib/postgresql/ts_dir
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_10_data_tablespaces/Deleting_a_tablespace.jpg)
 
 # Практика +
 
@@ -99,4 +99,4 @@ ALTER TABLESPACE pg_default SET (random_page_cost = 1.1);
 \db+
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_10_data_tablespaces/Setting_random_page_cost_for_a_tablespace.jpg)
