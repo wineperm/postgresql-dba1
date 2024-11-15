@@ -34,7 +34,7 @@ VACUUM;
 SELECT * FROM pg_stat_all_tables WHERE relid = 't'::regclass \gx
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_12_admin_monitoring/Table_Access_Statistics.jpg)
 
 ## 2. Взаимоблокировка
 
@@ -57,7 +57,7 @@ exit
 sudo tail -n 8 /var/log/postgresql/postgresql-17-main.log
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_12_admin_monitoring/Deadlock.jpg)
 
 # Практика +
 
@@ -94,4 +94,4 @@ ALTER SYSTEM RESET shared_preload_libraries;
 sudo pg_ctlcluster 16 main restart
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_12_admin_monitoring/pg_stat_statements_extension.jpg)
