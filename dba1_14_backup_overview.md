@@ -30,7 +30,7 @@ CREATE TABLE t(n integer);
 INSERT INTO t VALUES (1), (2), (3);
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_14_backup_overview/Database_and_table.jpg)
 
 ## 2. Логическая резервная копия
 
@@ -47,7 +47,7 @@ psql
 SELECT * FROM t;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_14_backup_overview/Logical_backup.jpg)
 
 ## 3. Физическая автономная резервная копия
 
@@ -64,7 +64,7 @@ psql -p 5433 -d backup_overview
 SELECT * FROM t;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_14_backup_overview/Physical_standalone_backup.jpg)
 
 # Практика +
 
@@ -95,7 +95,7 @@ pg_receivewal -D /var/lib/postgresql/archive --slot=archive
 || sudo ls -l /var/lib/postgresql/archive
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_14_backup_overview/Streaming_archive%2B.jpg)
 
 ## 2. Базовая физическая копия без журнала
 
@@ -104,7 +104,7 @@ pg_receivewal -D /var/lib/postgresql/archive --slot=archive
 || ls -l /home/student/tmp/backup
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_14_backup_overview/Base_physical_backup_without_log%2B.jpg)
 
 ## 3. Новые база данных и таблица
 
@@ -116,7 +116,7 @@ pg_receivewal -D /var/lib/postgresql/archive --slot=archive
 || INSERT INTO t VALUES (1), (2), (3);
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_14_backup_overview/New_database_and_table%2B.jpg)
 
 ## 4. Настройка восстановления
 
@@ -136,4 +136,4 @@ pg_receivewal --drop-slot --slot=archive
 
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_14_backup_overview/Recovery_configuration%2B.jpg)
