@@ -32,7 +32,7 @@ CREATE USER writer;
 CREATE USER reader;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Database_and_roles.jpg)
 
 ## 2. Привилегии
 
@@ -43,7 +43,7 @@ GRANT ALL ON SCHEMA public TO writer;
 GRANT USAGE ON SCHEMA public TO reader;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Privileges.jpg)
 
 ## 3. Привилегии по умолчанию
 
@@ -51,7 +51,7 @@ GRANT USAGE ON SCHEMA public TO reader;
 ALTER DEFAULT PRIVILEGES FOR ROLE writer IN SCHEMA public GRANT SELECT ON TABLES TO reader;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Default_privileges.jpg)
 
 ## 4. Пользователи
 
@@ -60,7 +60,7 @@ CREATE ROLE w1 LOGIN IN ROLE writer;
 CREATE ROLE r1 LOGIN IN ROLE reader;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Users.jpg)
 
 ## 5. Таблица
 
@@ -69,7 +69,7 @@ CREATE ROLE r1 LOGIN IN ROLE reader;
 CREATE TABLE t(n integer);
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Table.jpg)
 
 ## 6. Проверка
 
@@ -85,7 +85,7 @@ DROP TABLE t;
 DROP DATABASE access_overview;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Check.jpg)
 
 # Практика +
 
@@ -115,7 +115,7 @@ CREATE ROLE alice LOGIN;
 CREATE ROLE bob LOGIN;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Adding_roles%2B.jpg)
 
 ## 2. Ограничение использования trust
 
@@ -130,7 +130,7 @@ psql -l -U alice
 psql -l -U bob
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Restriction_of_use_trust%2B.jpg)
 
 ## 3. Метод аутентификации peer
 
@@ -152,7 +152,7 @@ psql -c '\conninfo' -U alice -d student
 psql -c '\conninfo' -U bob -d student
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/Peer_authentication_method%2B.jpg)
 
 ## 4. Одно отображение для нескольких ролей
 
@@ -166,4 +166,4 @@ psql -c '\conninfo' -U alice -d student
 psql -c '\conninfo' -U bob -d student
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_13_access_overview/One_mapping_for_multiple_roles%2B.jpg)
