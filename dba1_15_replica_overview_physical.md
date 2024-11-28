@@ -47,7 +47,7 @@ CREATE TABLE test(n integer);
 || sudo pg_ctlcluster 16 replica start
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_15_replica_overview_physical/Synchronous_replication.jpg)
 
 ## 2. Конфликтующие записи
 
@@ -60,7 +60,13 @@ INSERT INTO test(n) SELECT id FROM generate_series(1,10) AS id;
 || SELECT pg_sleep(5), count(*) FROM test;
 DELETE FROM test;
 VACUUM VERBOSE test;
------
+```
+
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_15_replica_overview_physical/Conflicting_records.jpg)
+
+---
+
+```
 ALTER SYSTEM SET hot_standby_feedback = on;
 SELECT pg_reload_conf();
 INSERT INTO test(n) SELECT id FROM generate_series(1,10) AS id;
@@ -71,4 +77,4 @@ ALTER SYSTEM RESET synchronous_standby_names;
 SELECT pg_reload_conf();
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_15_replica_overview_physical/Conflicting_records1.jpg)
