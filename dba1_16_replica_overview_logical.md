@@ -37,7 +37,7 @@ DROP PUBLICATION test;
 DROP DATABASE replica_overview_logical_dba2 (FORCE);
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_16_replica_overview_logical/Replication_on_one_server.jpg)
 
 ## 2. Двунаправленная репликация
 
@@ -65,4 +65,4 @@ SELECT min(id), max(id) FROM test;
 || SELECT min(id), max(id) FROM test;
 ```
 
-![Alt text]()
+![Alt text](https://github.com/wineperm/postgresql-dba1/blob/main/dba1_16_replica_overview_logical/Bidirectional_replication.jpg)
